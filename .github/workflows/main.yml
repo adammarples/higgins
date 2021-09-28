@@ -28,6 +28,6 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: higgins
-          runtime: python
+          runtime: python39
           credentials: ${{ secrets.gcp_credentials }}
 
