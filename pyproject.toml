@@ -8,7 +8,6 @@ authors = ["adammarples <adammarples@gmail.com>"]
 python = "~3.9"
 twilio = "^7.0.0"
 requests = "^2.26.0"
-Flask = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
