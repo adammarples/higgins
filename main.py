@@ -16,8 +16,6 @@ class Person:
         return self.name.split()[1].title()
 
 
-# @app.route('/bot', methods=['POST'])
-# def bot():
 def whatsapp_webhook(request):
     message = request.values.get('Body', '').lower()
     name = request.values.get('ProfileName', '').lower()
