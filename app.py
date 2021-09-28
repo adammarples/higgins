@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from flask import Flask, request
+# from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 
 @dataclass
@@ -19,8 +19,9 @@ class Person:
         return self.name.split()[1].title()
 
 
-@app.route('/bot', methods=['POST'])
-def bot():
+# @app.route('/bot', methods=['POST'])
+# def bot():
+def whatsapp_webhook(request):
     message = request.values.get('Body', '').lower()
     name = request.values.get('ProfileName', '').lower()
     person = Person(name)
