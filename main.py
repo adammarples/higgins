@@ -1,9 +1,6 @@
 from dataclasses import dataclass
 
-# from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-
-# app = Flask(__name__)
 
 
 @dataclass
@@ -50,8 +47,3 @@ def higgins(message: str, person: Person) -> str:
         return ''
     drinks = f'{H}️ Your {noun}, Mr. {person.last_name} Sir {D*N}'
     return drinks
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
