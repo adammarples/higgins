@@ -17,10 +17,9 @@ class Person:
 
 
 def whatsapp_webhook(request):
-    # values = request.get_json(silent=True)
-    # print(values)
-    message = request.values.get('Body', '').lower()
-    name = request.values.get('ProfileName', '').lower()
+    data = request.get_json(silent=True)
+    message = data.get('Body', '').lower()
+    name = data.get('ProfileName', '').lower()
     person = Person(name)
     resp = MessagingResponse()
     msg = resp.message()
